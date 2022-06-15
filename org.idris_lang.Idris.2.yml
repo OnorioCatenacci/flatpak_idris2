@@ -1,13 +1,13 @@
-app-id: org.flatpak.Hello
+app-id: org.idris_lang.Idris.2
 runtime: org.freedesktop.Platform
 runtime-version: '21.08'
 sdk: org.freedesktop.Sdk
-command: hello.sh
+command: idris2
 modules:
-  - name: hello
+  - name: idris2
     buildsystem: simple
     build-commands:
-      - install -D hello.sh /app/bin/hello.sh
+      - install -D idris2 /app/bin/idris2
     sources:
       - type: file
         path: hello.sh
