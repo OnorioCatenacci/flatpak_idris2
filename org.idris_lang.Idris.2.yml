@@ -4,10 +4,14 @@ runtime-version: '21.08'
 sdk: org.freedesktop.Sdk
 command: idris2
 modules:
-  - name: idris2
+  - name: chezscheme
     buildsystem: simple
+#    config-opts: 
+#      - --threads
     build-commands:
-      - install -D idris2 /app/bin/idris2
+      - ./configure --threads
+      - sudo make install
     sources:
-      - type: file
-        path: hello.sh
+      - type: git
+        url: https://github.com/cisco/ChezScheme.git
+        tag: v9.5.8
