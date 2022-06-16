@@ -1,4 +1,4 @@
-app-id: org.idris_lang.Idris.2
+app-id: org.idris_lang.Idris2
 runtime: org.freedesktop.Platform
 runtime-version: '21.08'
 sdk: org.freedesktop.Sdk
@@ -10,7 +10,7 @@ modules:
 #      - --threads
     build-commands:
       - ./configure --threads
-      - sudo make install
+      - make install
     sources:
       - type: git
         url: https://github.com/cisco/ChezScheme.git
